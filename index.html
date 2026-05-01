@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti</title>
+    <style>
+        /* Reset y estilos base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fdf2f8; /* Un tono rosado muy suave, puedes cambiarlo */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Pantalla inicial */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #be185d; 
+            margin-bottom: 10px;
+        }
+
+        .scroll-indicator {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #888;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+
+        /* Contenedor y Tarjetas */
+        .timeline {
+            width: 100%;
+            max-width: 450px; /* Tamaño ideal para móvil */
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            
+            /* Estado inicial oculto para la animación */
+            opacity: 0; 
+            transform: translateY(60px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Clase que se agrega con JS al hacer scroll */
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            aspect-ratio: 4/5; /* Proporción ideal para fotos verticales de celular */
+            background-color: #eee;
+        }
+
+        .card p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nuestra Historia</h1>
+        <p>Desliza hacia abajo ❤️</p>
+        <div class="scroll-indicator">↓</div>
+    </header>
+
+    <div class="timeline">
+        <!-- Tarjeta 1 -->
+         <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="niña.JPG" alt="Recuerdo 1">
+            <p>Ella es Merab, nació en 2008, es una niña dulce y muy hermosa.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="diosa.jpg" alt="Recuerdo 1">
+            <p>Ella es la mujer mas hermosa y preciosa en todo el mundo mundial, me derrito cada vez que a veo.</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card">
+            <img src="boda.jpg" alt="Recuerdo 2">
+            <p>Agradezco infinitamente a Dios por haberme permitido conocerte y ser tuyo.</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+            <img src="fiesta.jpg" alt="Recuerdo 3">
+            <p>Una foto para recordar en una noche memorable, donde el reflector te lo llevaste tu mi princesa.</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="card">
+            <img src="guapa.jpg" alt="Recuerdo 4">
+            <p>Ninguna estrella te distrae cuando estas viendo la luna y tu eres mi luna, mi universo entero.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="aniversario.jpg" alt="Recuerdo 1">
+            <p>¡Nuestro 1er Aniversario de noviecitos! Somos tan felices juntos.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="cine.jpg" alt="Recuerdo 1">
+            <p>Una de nuestras miles salidas al cine.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="antea.jpg" alt="Recuerdo 1">
+            <p>Y no se diga de nuestras salidas por todo Querétaro.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="nosotros.jpg" alt="Recuerdo 1">
+            <p>Te amo mi princesa, mi niña hermosa, mi corazón de oro, se que con esto no pagaré nada de lo que me has dado pero es con todo mi amor.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="lago.jpg" alt="Recuerdo 1">
+            <p>Eres especial.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="hermosa.jpg" alt="Recuerdo 1">
+            <p>Eres muy hermosa.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="unica.jpg" alt="Recuerdo 1">
+            <p>Eres mi paz y mi refugio.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="bella.jpg" alt="Recuerdo 1">
+            <p>Pero sobre todo, eres tú mi primer y ultimo amor, eres tu la persona con la que compartiré toda mi vida.</p>
+        </div>
+
+        <div class="card">
+            <!-- Reemplaza el src con la ruta de tu foto -->
+            <img src="amor.jpg" alt="Recuerdo 1">
+            <p>Te amo mi niña chiquita, te amaré siempre hasta mi ultimo aliento.</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuración del Intersection Observer
+        const observerOptions = {
+            root: null, // Usa el viewport del navegador
+            rootMargin: '0px',
+            threshold: 0.15 // Se activa cuando el 15% de la tarjeta es visible en pantalla
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Muestra la tarjeta
+                    entry.target.classList.add('visible');
+                } else {
+                    // Oculta la tarjeta al salir de pantalla (para que la animación se repita al subir)
+                    // Si prefieres que se queden visibles una vez que aparecen, puedes borrar este "else".
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Buscar todas las tarjetas y observarlas
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
